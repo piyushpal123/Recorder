@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/recorder/record/AndroidAudioRecoder.kt">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/src/main/java/com/example/recorder/record/AndroidAudioRecoder.kt" />
+              <option name="originalContent" value="package com.example.recorder.record&#10;&#10;import android.content.Context&#10;import android.media.MediaRecorder&#10;import android.os.Build&#10;import java.io.File&#10;&#10;class AndroidAudioRecoder (&#10;   private val context : Context&#10;)&#10;&#10;:AudioRecoder{&#10;    private var recoder = MediaRecoder?= null&#10;    private fun createRecoder(): MediaRecorder{&#10;        return if(Build.VERSION.SDK_INT&gt;=Build.VERSION_CODES.S) {&#10;            MediaRecorder(context)&#10;        }else{&#10;            MediaRecorder()&#10;        }&#10;    }&#10;&#10;    override fun start(outputFile: File){&#10;        createRecoder().apply{&#10;            setAudioSource(MediaRecoder.AudioSource.MIC)&#10;        }&#10;    }&#10;&#10;}" />
+              <option name="updatedContent" value="package com.example.recorder.record&#10;&#10;import android.content.Context&#10;import android.media.MediaRecorder&#10;import android.os.Build&#10;import java.io.File&#10;&#10;class AndroidAudioRecoder (&#10;   private val context : Context&#10;)&#10;: AudioRecoder {&#10;    private var recorder: MediaRecorder? = null&#10;    private fun createRecorder(): MediaRecorder {&#10;        return if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.S) {&#10;            MediaRecorder(context)&#10;        } else {&#10;            MediaRecorder()&#10;        }&#10;    }&#10;&#10;    override fun start(outputFile: File) {&#10;        recorder = createRecorder().apply {&#10;            setAudioSource(MediaRecorder.AudioSource.MIC)&#10;            // ...other MediaRecorder setup as needed...&#10;        }&#10;    }&#10;&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
